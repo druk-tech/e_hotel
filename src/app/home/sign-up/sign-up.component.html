@@ -1,0 +1,50 @@
+
+        <form [formGroup]="signUpForm">
+            
+              <label>Username:</label>
+              <input type="text" 
+              placeholder="Username" 
+              formControlName="username">
+        
+            <!-- <div
+                *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched"
+                class="alert alert-danger">Please enter Username</div> -->
+        
+              <label>Contact:</label>
+              <input  type="text"
+              placeholder="Contact" 
+              formControlName="contact">
+        
+            <!-- <div
+                *ngIf="!signupForm.get('contact').valid && signupForm.get('contact').touched"
+                class="alert alert-danger">Please enter Username</div> -->
+             
+                <label>Email:</label>
+                <input type="text"
+                placeholder="Email"
+                formControlName="email">
+
+            <!-- <div
+                *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
+                class="alert alert-danger">Please enter Username</div> -->
+            
+                <label>Password:</label>
+                <input type="text"
+                placeholder="Password" 
+                formControlName="password">
+            
+            <!-- <div
+                *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
+                class="alert alert-danger">Please enter Username</div> -->
+        
+                <label>Confirm Password:</label>
+                <input type="text"
+                placeholder="Enter Password" 
+                formControlName="confirmPassword">
+
+            <!-- <div
+                *ngIf="!signupForm.get('cPwd').valid && signupForm.get('cPwd').touched"
+                class="alert alert-danger">Please enter Username</div> -->
+            <button (click)="submit()" class="btn btn-primary">Sign Up</button>
+        </form>
+   

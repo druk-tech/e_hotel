@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "e-Hotel": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "e-Hotel"
+    }
+  },
+  "defaultProject": "e-Hotel",
+  "cli": {
+    "analytics": "a9e2bc5b-07df-4887-b3c2-37d41cc2db2f"
+  }
 }
