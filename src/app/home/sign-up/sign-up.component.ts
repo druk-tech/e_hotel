@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { ServiceService } from 'src/app/Service/service.service';
 
 
@@ -10,8 +10,8 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class SignUPComponent implements OnInit {
 
+  signUpForm:FormGroup;
 
-signUpForm : FormGroup;
   constructor(private fb: FormBuilder, private signUpService:ServiceService) { }
 
   ngOnInit(): void {
@@ -19,9 +19,8 @@ signUpForm : FormGroup;
   }
   buildForm(){
     this.signUpForm = this.fb.group({
-
-      contact: [''],
       username: [''],
+      contact: [''],
       email: [''],
       password: [''],
       confirmPassword: [''],

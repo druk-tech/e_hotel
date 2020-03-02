@@ -1,50 +1,78 @@
+    <!-- <Navbar> -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top"> 
+        <a href="#" class="navbar-brand mr-3">eHotel</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a routerLink="/home" class="nav-item nav-link">Home</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+              <a routerLink="/sign-up" class="nav-item nav-link">Sign In</a>
+              <a routerLink="#" class="nav-item nav-link">Sign Out</a>
+            </div>
+        </div>
+    </nav>
+    <!--</ Navbar> -->
+    <br>
+    <br>
+    <br>
 
-        <form [formGroup]="signUpForm">
-            
-              <label>Username:</label>
-              <input type="text" 
-              placeholder="Username" 
-              formControlName="username">
-        
-            <!-- <div
-                *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched"
-                class="alert alert-danger">Please enter Username</div> -->
-        
-              <label>Contact:</label>
-              <input  type="text"
-              placeholder="Contact" 
-              formControlName="contact">
-        
-            <!-- <div
-                *ngIf="!signupForm.get('contact').valid && signupForm.get('contact').touched"
-                class="alert alert-danger">Please enter Username</div> -->
-             
-                <label>Email:</label>
+<div class="container">
+  
+    <div class="row shadow p-4 mb-4bg-white">
+      <div class="col-md-6 offset-md-3 mt-4" [FormGroup]="signUpForm">
+          <h3 style="text-align: center; color:black">Sign Up</h3>
+          <form >
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
                 <input type="text"
-                placeholder="Email"
-                formControlName="email">
+                       class="form-control"
+                       id="loginUsername"
+                       formControlName="username"
+                       placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="loginContact">Contact</label>
+                <input type="text"
+                       class="form-control"
+                       id="loginContact"
+                       formControlName="contact"
+                       placeholder="Enter Contact">
+            </div>
+              <div class="form-group">
+                  <label for="loginEmail">Email</label>
+                  <input type="text"
+                         class="form-control"
+                         id="loginEmail"
+                         formControlName="email"
+                         placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                  <label for="loginPassword">Password</label>
+                  <input type="password"
+                         class="form-control"
+                         id="loginPassword"
+                         formControlName="password"
+                         placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="loginConfirmPassword">Confirm Password</label>
+                <input type="password"
+                       class="form-control"
+                       id="loginConfirmPassword"
+                       formControlName="confirmPassword"
+                       placeholder="Re-enter the Password">
+            </div>
+              <div class="form-group form-check">
+                  <a href="#"> Forgot Password</a>
+              </div>
+              <button class="btn btn-primary" (click)="submit()">Login</button>
+          </form>
+      </div>
+    </div>
 
-            <!-- <div
-                *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
-                class="alert alert-danger">Please enter Username</div> -->
-            
-                <label>Password:</label>
-                <input type="text"
-                placeholder="Password" 
-                formControlName="password">
-            
-            <!-- <div
-                *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
-                class="alert alert-danger">Please enter Username</div> -->
-        
-                <label>Confirm Password:</label>
-                <input type="text"
-                placeholder="Enter Password" 
-                formControlName="confirmPassword">
+</div>
 
-            <!-- <div
-                *ngIf="!signupForm.get('cPwd').valid && signupForm.get('cPwd').touched"
-                class="alert alert-danger">Please enter Username</div> -->
-            <button (click)="submit()" class="btn btn-primary">Sign Up</button>
-        </form>
-   
+  

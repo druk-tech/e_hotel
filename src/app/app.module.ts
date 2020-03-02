@@ -10,6 +10,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ServiceService } from './Service/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { PortalComponent } from './admin/portal/portal.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { HomeRoutingModule } from './home/home-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,14 +22,21 @@ import { AdminComponent } from './admin/admin.component';
     HomeComponent,
     SignUPComponent,
     LogInComponent,
-    AdminComponent
+    AdminComponent,
+    UserComponent,
+    ProfileComponent,
+    PortalComponent,
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeRoutingModule
+    
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

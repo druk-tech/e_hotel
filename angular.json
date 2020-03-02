@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "e-Hotel": {
+    "e-hotel": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/e-Hotel",
+            "outputPath": "dist/e-hotel",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "e-Hotel:build"
+            "browserTarget": "e-hotel:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "e-Hotel:build:production"
+              "browserTarget": "e-hotel:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "e-Hotel:build"
+            "browserTarget": "e-hotel:build"
           }
         },
         "test": {
@@ -110,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "e-Hotel:serve"
+            "devServerTarget": "e-hotel:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "e-Hotel:serve:production"
+              "devServerTarget": "e-hotel:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "e-Hotel",
+  "defaultProject": "e-hotel",
   "cli": {
     "analytics": "a9e2bc5b-07df-4887-b3c2-37d41cc2db2f"
   }
