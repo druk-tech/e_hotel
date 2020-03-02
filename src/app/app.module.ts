@@ -15,6 +15,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { PortalComponent } from './admin/portal/portal.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HomeRoutingModule } from './home/home-routing.module';
+import { AdminRoutingModule } from './admin/admin-routing.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HomeRoutingModule } from './home/home-routing.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    AdminRoutingModule
     
   ],
   providers: [ServiceService],

@@ -9,8 +9,7 @@
                 <a routerLink="/home" class="nav-item nav-link">Home</a>
             </div>
             <div class="navbar-nav ml-auto">
-              <a routerLink="/sign-up" class="nav-item nav-link">Sign In</a>
-              <a routerLink="#" class="nav-item nav-link">Sign Out</a>
+              <a routerLink="/home" class="nav-item nav-link">Sign Out</a>
             </div>
         </div>
     </nav>
@@ -22,9 +21,9 @@
 <div class="container">
   
     <div class="row shadow p-4 mb-4bg-white">
-      <div class="col-md-6 offset-md-3 mt-4" [FormGroup]="signUpForm">
+      <div class="col-md-6 offset-md-3 mt-4">
           <h3 style="text-align: center; color:black">Sign Up</h3>
-          <form >
+          <form [formGroup]="signUpForm">
             <div class="form-group">
                 <label for="loginUsername">Username</label>
                 <input type="text"

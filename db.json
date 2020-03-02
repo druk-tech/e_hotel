@@ -159,6 +159,15 @@
       "confirmPassword": "",
       "permissionAccess": false,
       "id": 17
+    },
+    {
+      "username": "Amy",
+      "contact": "12345",
+      "email": "amy@1995gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "permissionAccess": false,
+      "id": 18
     }
   ]
 }
