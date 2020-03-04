@@ -10,15 +10,18 @@ const appRoutes: Routes = [
   },
   {
     path:'home',
-    loadChildren: ()=>import('./home/home.module').then(module=>module.HomeModule)
+    //loadChildren: './home/home.module#HomeModule'
+    loadChildren: ()=>import('./home/home.module').then(m => m.HomeModule)
   }, 
   {
     path:'admin',
-    loadChildren: ()=>import('./admin/admin.module').then(module=>module.AdminModule)
+    //loadChildren: './admin/admin.module#AdminModule'
+    loadChildren: ()=>import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
     path:'user',
-    loadChildren: ()=>import('./user/user.module').then(module=>module.UserModule)
+    //loadChildren: './user/user.module#UserModule'
+    loadChildren: ()=>import('./user/user.module').then(m => m.UserModule)
   }
 ];
 
