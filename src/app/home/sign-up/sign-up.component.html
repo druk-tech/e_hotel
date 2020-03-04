@@ -1,29 +1,24 @@
-    <!-- <Navbar> -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top"> 
-        <a href="#" class="navbar-brand mr-3">eHotel</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a routerLink="/home" class="nav-item nav-link">Home</a>
-            </div>
-            <div class="navbar-nav ml-auto">
-              <a routerLink="/home" class="nav-item nav-link">Sign Out</a>
-            </div>
+<Navbar>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 fixed-top"> 
+    <a href="#" class="navbar-brand mr-3">eHotel</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a routerLink="/home" class="nav-item nav-link">Home</a>
         </div>
-    </nav>
+    </div>
+</nav>
     <!--</ Navbar> -->
     <br>
     <br>
     <br>
-
 <div class="container">
-  
     <div class="row shadow p-4 mb-4bg-white">
       <div class="col-md-6 offset-md-3 mt-4">
           <h3 style="text-align: center; color:black">Sign Up</h3>
-          <form [formGroup]="signUpForm">
+          <form [formGroup]="signUpForm" (ngSubmit)="SignUpSubmit()">
             <div class="form-group">
                 <label for="loginUsername">Username</label>
                 <input type="text"
@@ -31,6 +26,9 @@
                        id="loginUsername"
                        formControlName="username"
                        placeholder="Enter username">
+            </div>
+            <div *ngIf="username.invalid && username.touched">
+              <p style="color: red;">Username is invalid</p> 
             </div>
             <div class="form-group">
                 <label for="loginContact">Contact</label>
@@ -40,6 +38,9 @@
                        formControlName="contact"
                        placeholder="Enter Contact">
             </div>
+            <div *ngIf="contact.invalid && contact.touched">
+              <p style="color: red;">Contact is invalid</p>
+            </div>
               <div class="form-group">
                   <label for="loginEmail">Email</label>
                   <input type="text"
@@ -48,6 +49,10 @@
                          formControlName="email"
                          placeholder="Enter email">
               </div>
+              <div *ngIf="email.invalid && email.touched">
+                <p style="color: red;">Email is invalid</p>
+              </div>
+
               <div class="form-group">
                   <label for="loginPassword">Password</label>
                   <input type="password"
@@ -56,19 +61,17 @@
                          formControlName="password"
                          placeholder="Password">
               </div>
-              <div class="form-group">
-                <label for="loginConfirmPassword">Confirm Password</label>
-                <input type="password"
-                       class="form-control"
-                       id="loginConfirmPassword"
-                       formControlName="confirmPassword"
-                       placeholder="Re-enter the Password">
-            </div>
+              <div *ngIf="password.invalid && password.touched">
+                <p style="color: red;">Password is invalid</p>
+              </div>
               <div class="form-group form-check">
                   <a href="#"> Forgot Password</a>
               </div>
-              <button class="btn btn-primary" (click)="submit()">Login</button>
+              <button class="btn btn-primary" (click)="createUsers()">Sign Up</button>
           </form>
+          <!-- <br>
+          <br>
+          <div *ngIf="success"><p style="text-align: center; color: green;">You have register successfully</p></div> -->
       </div>
     </div>
 
